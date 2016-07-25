@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string name="app_name">SimpleAdapterDemo</string>
+  <string name="action_settings">Settings</string>
+	<string name="no_string"></string>    
+	<string name="con_state">Connection:</string>
+	<string name="IP_addr">IP Addr:</string>
+	<string name="netmask">Netmask:</string>
+	<string name="gateway">Gateway:</string>
+	
+</resources>

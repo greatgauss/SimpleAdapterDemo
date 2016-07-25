@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/netcfg_view_item"
+  android:orientation="horizontal"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  >
+  <TextView
+    android:id="@+id/netAttr" 
+    android:layout_width="wrap_content" 
+    android:layout_height="40px" 
+    android:text="@string/no_string"
+    android:textColor="#ffa0b2da"
+    android:textSize="26px"
+    android:gravity="left"
+    android:lineSpacingExtra="14px" />
+  
+  <TextView
+    android:id="@+id/netAttrContent"
+    android:layout_width="310px" 
+    android:layout_height="40px" 
+    android:layout_marginLeft="10px"
+    android:text="@string/no_string"
+    android:textSize="26px"
+    android:gravity="left" />
+</LinearLayout>
+
+
+

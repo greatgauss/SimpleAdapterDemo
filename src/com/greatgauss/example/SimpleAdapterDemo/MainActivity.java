@@ -56,16 +56,25 @@ public class MainActivity extends Activity {
 
         //Init ListView and bind it to SimpleAdapter
         mListViewNetcfg = (ListView) findViewById(R.id.listviewNetCfg);
+
+        //Draw ListView
         mListViewNetcfg.setAdapter(mListAdapter);
+
+		mListOfMap.get(0).put("netAttrContent", "Connected");
+		mListOfMap.get(3).put("netAttrContent", "192.168.1.1");
 
         final Handler handler = new Handler() {
             public void handleMessage(Message msg) {
                 switch (msg.what) {
-            	case MSG_HEARTBEAT:
-            		ip++;
-            		mListOfMap.get(1).put("netAttrContent", "192.168.1." + ip);
-		
-            		mListAdapter.notifyDataSetChanged();
+                case MSG_HEARTBEAT:
+                    ip++;
+
+                    //Update Model of MVC
+                    mListOfMap.get(1).put("netAttrContent", "192.168.1." + ip);
+                    mListOfMap.get(2).put("netAttrContent", "255.255.255." + ip);
+
+                    //Update View of MVC by callback
+                    mListAdapter.notifyDataSetChanged();
                     break;
                 }
 
